@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OKU - Map</title>
+
+    <!-- TITLE ADDING FAVICON -->
+    <link rel="shortcut icon" href="img/oku.ico" type="image/x-icon" />
+
+    <!-- FONT AWESOME STYLESHEET -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+    <!-- CSS SHEET -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="map.css">
+
+    <!-- JQUERY CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Google Maps JavaScript API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRss-ShDukw9btX1u2NX_qeZmwgM3K8L4"></script>
+    <script>
+        function initMap() {
+            var istanbul = { lat: 41.0082, lng: 28.9784 };
+            var locations = [
+                {lat: 41.0082, lng: 28.9784, title: 'kitapotomatı1', link: 'book.html?kitap=kitapotomatı1'},
+                {lat: 41.0130, lng: 29.0555, title: 'kitapotomatı2', link: 'book.html?kitap=kitapotomatı2'},
+                {lat: 41.0201, lng: 29.1001, title: 'kitapotomatı3', link: 'book.html?kitap=kitapotomatı3'},
+                {lat: 41.0250, lng: 28.9750, title: 'kitapotomatı4', link: 'book.html?kitap=kitapotomatı4'},
+                {lat: 41.0300, lng: 29.0200, title: 'kitapotomatı5', link: 'book.html?kitap=kitapotomatı5'},
+                {lat: 41.0350, lng: 29.0450, title: 'kitapotomatı6', link: 'book.html?kitap=kitapotomatı6'},
+                {lat: 41.0400, lng: 28.9500, title: 'kitapotomatı7', link: 'book.html?kitap=kitapotomatı7'},
+                {lat: 41.0450, lng: 28.9800, title: 'kitapotomatı8', link: 'book.html?kitap=kitapotomatı8'},
+                {lat: 41.0500, lng: 29.0000, title: 'kitapotomatı9', link: 'book.html?kitap=kitapotomatı9'},
+                {lat: 41.0550, lng: 29.0200, title: 'kitapotomatı10', link:'book.html?kitap=kitapotomatı10'}
+            ];
+
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 10,
+                center: istanbul
+            });
+
+            var bookIcon = {
+                url: 'https://img.icons8.com/emoji/48/000000/open-book-emoji.png', // URL of the book icon
+                scaledSize: new google.maps.Size(30, 30), // scaled size of the icon
+            };
+
+            locations.forEach(function(location) {
+                var marker = new google.maps.Marker({
+                    position: location,
+                    map: map,
+                    title: location.title,
+                    icon: bookIcon
+                });
+
+                var infowindow = new google.maps.InfoWindow({
+                    content: `<a href="${location.link}">${location.title}</a>`
+                });
+
+                marker.addListener('click', function() {
+                    infowindow.open(map, marker);
+                });
+            });
+        }
+    </script>
+    <style>
+        /* Tam ekran harita için stil */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        #map {
+            height: calc(100% - 60px); /* Navigasyon çubuğunun yüksekliğini çıkararak tam ekran yap */
+            width: 100%;
+        }
+    </style>
+</head>
+<body onload="initMap()">
+    <!-- NAVIGATION PART -->
+    <nav>
+        <a href="index.html">
+			<img src="img/okuLogo.png" class="logo" alt="">
+		</a>
+
+        <div class="navigation">
+            <ul>
+                <i id="menu-close" class="fas fa-times"></i>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="map.html">Map</a></li>
+                <li><a href="book.html">Books</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <img src="img/menu.png" id="menu-btn" alt="Menu">
+        </div>
+    </nav>
+    <!-- NAVIGATION PART ENDS -->
+
+    <section id="map">
+        <!-- Google Maps JavaScript API will populate this div -->
+    </section>
+
+    <script>
+        // SHOW MENU LINKS
+        $('#menu-btn').click(function(){
+            $('nav .navigation ul').addClass('active')
+        });
+
+        // HIDE NAVBAR
+        $('#menu-close').click(function(){
+            $('nav .navigation ul').removeClass('active')
+        });
+    </script>
+</body>
+</html>

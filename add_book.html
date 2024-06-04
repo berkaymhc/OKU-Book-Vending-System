@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yeni Kitap Ekle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Yeni Kitap Ekle</h2>
+    <form action="add_book.php" method="POST">
+        <label for="title">Kitap Adı:</label>
+        <input type="text" id="title" name="title" required>
+        <br>
+        <label for="author">Yazar:</label>
+        <input type="text" id="author" name="author" required>
+        <br>
+        <label for="description">Açıklama:</label>
+        <textarea id="description" name="description" required></textarea>
+        <br>
+        <label for="otomat">Otomat:</label>
+        <select id="otomat" name="otomat" required>
+            <option value="kitapotomatı1">Kitapotomatı 1</option>
+            <option value="kitapotomatı2">Kitapotomatı 2</option>
+            <option value="kitapotomatı3">Kitapotomatı 3</option>
+            <option value="kitapotomatı4">Kitapotomatı 4</option>
+            <option value="kitapotomatı5">Kitapotomatı 5</option>
+            <option value="kitapotomatı6">Kitapotomatı 6</option>
+            <option value="kitapotomatı7">Kitapotomatı 7</option>
+            <option value="kitapotomatı8">Kitapotomatı 8</option>
+            <option value="kitapotomatı9">Kitapotomatı 9</option>
+            <option value="kitapotomatı10">Kitapotomatı 10</option>
+        </select>
+        <br>
+        <button type="submit">Kitap Ekle</button>
+    </form>
+</body>
+</html>

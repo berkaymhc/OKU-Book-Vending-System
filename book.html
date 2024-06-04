@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OKU</title>
+
+    <!-- TITLE ADDING FAVICON -->
+    <link rel="shortcut icon" href="img/oku.ico" type="image/x-icon" />
+
+    <!-- FONT AWESOME STYLESHEET -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- CSS SHEET -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="book.css">
+
+    <!-- JQUERY CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- BOOTSTRAP JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <!-- NAVIGATION PART -->
+    <nav>
+        <a href="index.html">
+			<img src="img/okuLogo.png" class="logo" alt="">
+		</a>
+
+        <div class="navigation">
+            <ul>
+                <i id="menu-close" class="fas fa-times"></i>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="map.html">Map</a></li>
+                <li><a href="book.html">Books</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <img src="img/menu.png" id="menu-btn" alt="">
+        </div>
+    </nav>
+    <!-- NAVIGATION PART ENDS -->
+
+    <!-- COVER PART -->
+    <section id="about-home">
+        <h2><a href="#" id="bookOptionsLink" data-toggle="modal" data-target="#bookOptionsModal">Books</a></h2>
+    </section>
+    <!-- COVER PART ENDS -->
+
+    <!-- BOOKS LIST PART -->
+    <section id="books">
+        <div id="kitapotomatı1" class="kitap-listesi" style="display: none;">
+            <h3>Kitapotomatı 1</h3>
+            <div class="book-grid">
+                <!-- Kitaplar buraya eklenecek -->
+            </div>
+        </div>
+        <div id="kitapotomatı2" class="kitap-listesi" style="display: none;">
+            <h3>Kitapotomatı 2</h3>
+            <div class="book-grid">
+                <!-- Kitaplar buraya eklenecek -->
+            </div>
+        </div>
+        <div id="kitapotomatı3" class="kitap-listesi" style="display: none;">
+            <h3>Kitapotomatı 3</h3>
+            <div class="book-grid">
+                <!-- Kitaplar buraya eklenecek -->
+            </div>
+        </div>
+        <div id="kitapotomatı4" class="kitap-listesi" style="display: none;">
+            <h3>Kitapotomatı 4</h3>
+            <div class="book-grid">
+                <!-- Kitaplar buraya eklenecek -->
+            </div>
+        </div>
+    </section>
+    <!-- BOOKS LIST PART ENDS -->
+
+    <!-- BOOK OPTIONS MODAL -->
+    <div class="modal fade" id="bookOptionsModal" tabindex="-1" role="dialog" aria-labelledby="bookOptionsModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="bookOptionsModalLabel">Books Options</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <button id="addBookLink" class="btn btn-primary" data-toggle="modal" data-target="#addBookModal">Yeni Kitap Ekle</button>
+                    <button id="deleteBookLink" class="btn btn-danger" data-toggle="modal" data-target="#deleteBookModal">Kitap Sil</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- BOOK OPTIONS MODAL ENDS -->
+
+    <!-- ADD BOOK MODAL -->
+    <div class="modal fade" id="addBookModal" tabindex="-1" role="dialog" aria-labelledby="addBookModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addBookModalLabel">Yeni Kitap Ekle</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="addBookForm">
+                        <div class="form-group">
+                            <label for="title">Kitap Adı:</label>
+                            <input type="text" id="title" name="title" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="author">Yazar:</label>
+                            <input type="text" id="author" name="author" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Açıklama:</label>
+                            <textarea id="description" name="description" class="form-control" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="otomat">Otomat:</label>
+                            <select id="otomat" name="otomat" class="form-control" required>
+                                <option value="kitapotomatı1">Kitapotomatı 1</option>
+                                <option value="kitapotomatı2">Kitapotomatı 2</option>
+                                <option value="kitapotomatı3">Kitapotomatı 3</option>
+                                <option value="kitapotomatı4">Kitapotomatı 4</option>
+                                <option value="kitapotomatı5">Kitapotomatı 5</option>
+                                <option value="kitapotomatı6">Kitapotomatı 6</option>
+                                <option value="kitapotomatı7">Kitapotomatı 7</option>
+                                <option value="kitapotomatı8">Kitapotomatı 8</option>
+                                <option value="kitapotomatı9">Kitapotomatı 9</option>
+                                <option value="kitapotomatı10">Kitapotomatı 10</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Kitap Ekle</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ADD BOOK MODAL ENDS -->
+
+    <!-- DELETE BOOK MODAL -->
+    <div class="modal fade" id="deleteBookModal" tabindex="-1" role="dialog" aria-labelledby="deleteBookModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteBookModalLabel">Kitap Sil</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="deleteBookForm">
+                        <div class="form-group">
+                            <label for="delete-otomat">Otomat:</label>
+                            <select id="delete-otomat" name="delete-otomat" class="form-control" required>
+                                <option value="kitapotomatı1">Kitapotomatı 1</option>
+                                <option value="kitapotomatı2">Kitapotomatı 2</option>
+                                <option value="kitapotomatı3">Kitapotomatı 3</option>
+                                <option value="kitapotomatı4">Kitapotomatı 4</option>
+                                <option value="kitapotomatı5">Kitapotomatı 5</option>
+                                <option value="kitapotomatı6">Kitapotomatı 6</option>
+                                <option value="kitapotomatı7">Kitapotomatı 7</option>
+                                <option value="kitapotomatı8">Kitapotomatı 8</option>
+                                <option value="kitapotomatı9">Kitapotomatı 9</option>
+                                <option value="kitapotomatı10">Kitapotomatı 10</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="delete-title">Kitap Adı:</label>
+                            <select id="delete-title" name="delete-title" class="form-control" required>
+                                <!-- Kitaplar buraya eklenecek -->
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-danger">Kitap Sil</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- DELETE BOOK MODAL ENDS -->
+
+    <!-- MODAL PART -->
+    <div class="modal fade" id="bookModal" tabindex="-1" role="dialog" aria-labelledby="bookModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="bookModalLabel"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="bookAuthor"></p>
+                    <p id="bookDescription"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MODAL PART ENDS -->
+
+    <!-- FOOTER PART -->
+    <footer>
+        <div class="footer-col">
+            <h3>Home</h3>
+            <li>About Us</li>
+            <li>Map</li>
+            <li>Books</li>
+            <li>Contact</li>
+        </div>
+
+        <div class="footer-col">
+            <h3>Institutional</h3>
+            <li>Vision and Mission</li>
+            <li>Our Goals</li>
+            <li>Milestones</li>
+            <li>Confidentiality Agreement</li>
+        </div>
+
+        <div class="footer-col">
+            <h3>Newsletter</h3>
+            <p>To be notified instantly of new notifications..</p>
+
+            <div class="subscribe">
+                <input type="email" placeholder="Your email Address">
+                <a href="#" class="black">SUBSCRIBE</a>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>Copyright @ 2024 All rights reserved</p>
+            <div class="pro-links">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER PART ENDS -->
+
+    <script>
+        // SHOW MENU LINKS
+        $('#menu-btn').click(function(){
+            $('nav .navigation ul').addClass('active')
+        });
+
+        // HIDE NAVBAR
+        $('#menu-close').click(function(){
+            $('nav .navigation ul').removeClass('active')
+        });
+
+        // Show specific book list based on URL parameter
+        $(document).ready(function() {
+            var urlParams = new URLSearchParams(window.location.search);
+            var kitapOtomat = urlParams.get('kitap');
+            if (kitapOtomat) {
+                $('#' + kitapOtomat).show();
+                fetchBooks(kitapOtomat);
+            }
+
+            // Book link click event
+            $(document).on('click', '.book-link', function(e) {
+                e.preventDefault();
+                var title = $(this).data('title');
+                var author = $(this).data('author');
+                var description = $(this).data('description');
+                $('#bookModalLabel').text(title);
+                $('#bookAuthor').text('Yazar: ' + author);
+                $('#bookDescription').text('Açıklama: ' + description);
+                $('#bookModal').modal('show');
+            });
+
+            // Show Add Book modal
+            $('#addBookLink').click(function() {
+                $('#addBookModal').modal('show');
+            });
+
+            // Show Delete Book modal
+            $('#deleteBookLink').click(function() {
+                $('#deleteBookModal').modal('show');
+            });
+
+            // Handle form submission for adding book
+            $('#addBookForm').submit(function(e) {
+                e.preventDefault();
+
+                var formData = $(this).serialize();
+                $.post('add_book.php', formData, function(response) {
+                    alert(response);
+                    $('#addBookModal').modal('hide');
+                    location.reload();
+                });
+            });
+
+            // Handle form submission for deleting book
+            $('#deleteBookForm').submit(function(e) {
+                e.preventDefault();
+
+                var formData = $(this).serialize();
+                $.post('delete_book.php', formData, function(response) {
+                    alert(response);
+                    $('#deleteBookModal').modal('hide');
+                    location.reload();
+                });
+            });
+
+            // Populate book titles for selected otomat
+            $('#delete-otomat').change(function() {
+                var selectedOtomat = $(this).val();
+                fetchBookTitles(selectedOtomat);
+            });
+
+            function fetchBooks(kitapOtomat) {
+                $.ajax({
+                    url: 'fetch_books.php',
+                    type: 'GET',
+                    data: { otomat: kitapOtomat },
+                    dataType: 'json',
+                    success: function(data) {
+                        var bookList = $('#' + kitapOtomat + ' .book-grid');
+                        bookList.empty(); // Clear the existing books
+                        data.forEach(function(book) {
+                            bookList.append(`
+                                <div class="book-column">
+                                    <a href="#" class="book-link" data-title="${book.title}" data-author="${book.author}" data-description="${book.description}">
+                                        ${book.title}: "${book.author}"
+                                    </a>
+                                </div>
+                            `);
+                        });
+                    },
+                    error: function(err) {
+                        console.log('Error:', err);
+                    }
+                });
+            }
+
+            function fetchBookTitles(otomat) {
+                $.ajax({
+                    url: 'fetch_books.php',
+                    type: 'GET',
+                    data: { otomat: otomat },
+                    dataType: 'json',
+                    success: function(data) {
+                        var bookTitleSelect = $('#delete-title');
+                        bookTitleSelect.empty();
+                        data.forEach(function(book) {
+                            bookTitleSelect.append(`
+                                <option value="${book.title}">${book.title}</option>
+                            `);
+                        });
+                    },
+                    error: function(err) {
+                        console.log('Error:', err);
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

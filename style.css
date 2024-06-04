@@ -1,0 +1,471 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet');
+
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body
+{
+	font-family: "Raleway", sans-serif;
+}
+
+h1
+{
+	font-size: 2.5rem;
+	font-weight: 700;
+	color: #000000;
+}
+
+span
+{
+	font-size: .9rem;
+}
+
+h6
+{
+	font-size: 1.1rem;
+	color: #000000;
+}
+
+
+/*------------- NAV ------------*/
+nav
+{
+	position: fixed;
+	width: 100%;
+	background-color: #FFFFFF;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1vw 8vw;
+	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+	z-index: 1;
+}
+
+nav .logo
+{
+	width: 150px;
+	cursor: pointer;
+}
+
+nav .navigation
+{
+	display: flex;
+}
+
+#menu-btn
+{
+	width: 30px;
+	height: 30px;
+	display: none;
+}
+
+#menu-close
+{
+	display: none;
+}
+
+nav .navigation ul
+{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+nav .navigation ul li
+{
+	list-style: none;
+	margin-left: 30px;
+}
+
+nav .navigation ul li a
+{
+	text-decoration: none;
+	color: #000000;
+	font-size: 17px;
+	font-weight: 700;
+	transition: 0.3s ease;
+}
+
+nav .navigation ul li a.active,
+nav .navigation ul li a:hover
+{
+	color: #808080;
+
+}
+/*------------- NAV ------------*/
+
+
+
+/*------------- COVER --------------*/
+#home
+{
+	background-image: linear-gradient(rgba(25, 19, 91, 0.3), rgba(3, 3, 12, 0.7)), url("img/back.png");
+	width: 100%;
+	height: 100vh;
+	background-size: cover;
+	background-position: center center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding-top: 40px;
+}
+
+#home h2
+{
+	color: #808080;
+	font-size: 3.0rem;
+	letter-spacing: 1.2px;
+}
+
+#home p
+{
+	width: 50%;
+	color: #FFFFFF;
+	font-size: 1.2rem;
+	line-height: 25px;
+	letter-spacing: 1.2px;
+}
+
+#home .btn
+{
+	margin-top: 30px;
+}
+
+#home a
+{
+	text-decoration: none;
+	font-size: 1.2rem;
+	padding: 13px 35px;
+	background-color: #FFFFFF;
+	font-weight: 600;
+	border-radius: 5px;
+}
+
+#home a.gray
+{
+	color: #FFFFFF;
+	background: #000000;
+	transition: 0.3s ease;
+}
+
+#home a.gray:hover
+{
+	color: #000000;
+	background: #FFFFFF;
+}
+
+#home a.black
+{
+	color: #FFFFFF;
+	background: #000000;
+	transition: 0.3s ease;
+}
+
+#home a.black:hover
+{
+	color: #000000;
+	background: #FFFFFF;
+}
+/*------------- COVER --------------*/
+
+
+/*------------- FEATURES -------------*/
+#features
+{
+	padding: 5vw 8vw 0 8vw;
+	text-align: center;
+}
+
+#features .fea-base
+{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	grid-gap: 1rem;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+#features .fea-box
+{
+	background: #000000;
+	text-align: start;
+	padding: 1.2rem;
+	border-radius: 6px;
+}
+
+#features .fea-box i
+{
+	font-size: 2.3rem;
+	color: #FFFFFF;
+}
+
+#features .fea-box h3
+{
+	font-size: 1.2rem;
+	font-weight: 600;
+	color: #FFFFFF;
+	padding: 13px 0 7px 0;
+}
+
+#features .fea-box p
+{
+	font-size: 1rem;
+	font-weight: 400;
+	color: #FFFFFF;
+}
+/*------------- FEATURES -------------*/
+
+
+/*------------- FOOTER ------------*/
+footer
+{
+	padding: 8vw;
+	background-color: #808080;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+
+footer .footer-col
+{
+	padding-bottom: 40px;
+}
+
+footer h3
+{
+	color: #000000;
+	font-weight: 600;
+	padding-bottom: 20px;
+}
+
+footer li
+{
+	list-style: none;
+	color: #FFFFFF;
+	padding: 10px 0;
+	font-size: 15px;
+	cursor: pointer;
+	transition: 0.3s ease;
+}
+
+footer li:hover
+{
+	color: #FFFFFF;
+}
+
+footer p
+{
+	color: #FFFFFF;
+}
+
+footer .subscribe
+{
+	margin-top: 20px;
+}
+
+footer input
+{
+	width: 220px;
+	padding: 15px 12px;
+	background: #FFFFFF;
+	border: none;
+	outline: none;
+	color: #FFFFFF;
+}
+
+footer .subscribe a
+{
+	text-decoration: none;
+	font-size: 0.9rem;
+	padding: 15px 17px;
+	background-color: #000000;
+	font-weight: 600;
+}
+
+footer .subscribe a.black
+{
+	color: #FFFFFF;
+	background: #000000;
+	transition: 0.3s ease;
+}
+
+footer .subscribe a.black:hover
+{
+	color: #000000;
+	background: #FFFFFF;
+}
+
+footer .copyright
+{
+	margin-top: 20px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+footer .copyright p, footer .copyright p > a
+{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.pro-links
+{
+	margin-top: 10px;
+}
+
+.pro-links i
+{
+	padding: 10px 13px;
+	border: 1px solid #000000;
+	cursor: pointer;
+	transition: 0.3s ease;
+}
+
+.pro-links i:hover
+{
+	background: #808080;
+	color: #FFFFF2;
+}
+
+/*------------- FOOTER ------------*/
+
+
+/*-------------------- MOBILE ----------------*/
+
+@media screen and (max-width: 789px)
+{
+	nav
+	{
+		padding: 15px 20px;
+	}
+
+	nav img
+	{
+		width: 130px;
+	}
+
+	#menu-btn
+	{
+		display: initial;
+	}
+
+	#menu-close
+	{
+		display: initial;
+		font-size: 1.6rem;
+		color: #FFFFFF;
+		padding: 30px 0 20px 20px;
+	}
+
+	nav .navigation ul
+	{
+		position: absolute;
+		top: 0;
+		right: -220px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		width: 220px;
+		height: 100vh;
+		background: #FFFFFF;
+		backdrop-filter: blur(4.5px);
+		border: 1px solid #000000;
+		transition: 0.3s ease-in;
+	}
+
+	nav .navigation ul.active
+	{
+		right: 0;
+	}
+
+	nav .navigation ul li
+	{
+		padding: 20px 0 20px 40px;
+		margin-left: 0;
+	}
+
+	nav .navigation ul li a
+	{
+		color: #000000;
+	}
+
+	#home
+	{
+		padding: 0px;
+	}
+
+	#home p
+	{
+		width: 90%;
+	}
+
+	#features
+	{
+		padding: 8vw 4vw 0 4vw;
+	}
+
+	#course
+	{
+		padding: 8vw 4vw 8vw 4vw;
+	}
+
+	#registration
+	{
+		padding: 6vw 4vw 6vw 4vw;
+		gap: 2.2rem;
+	}
+
+	#registration .reminder .time
+	{
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin-top: 40px;
+	}
+
+	#experts
+	{
+		padding: 8vw 4vw 6vw 4vw;
+	}
+
+	footer .copyright .pro-links
+	{
+		margin-top: 20px;
+	}
+}
+
+
+@media screen and (max-width: 475px)
+{
+	#registration
+	{
+		flex-direction: column;
+	}
+
+	.reminder p, .reminder h1
+	{
+		text-align: center;
+	}
+
+	.reminder h1
+	{
+		font-size: 1.8rem;
+	}
+
+	#registration .reminder .time
+	{
+		justify-content: space-evenly;
+		margin-top: 20px;
+	}
+}
