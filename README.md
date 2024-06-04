@@ -68,4 +68,4 @@ License
 This project is licensed under the MIT License.
 
 Contact
-For any questions or inquiries, please contact us at email@example.com.
+For any questions or inquiries, please contact us at berkaymhc37@gmail.com .
