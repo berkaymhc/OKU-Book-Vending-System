@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "berkaymhc";  // Oluşturduğunuz kullanıcı adı
-$password = "QX5.u2rWm]HY*Kno";    // Oluşturduğunuz kullanıcı şifresi
-$dbname = "oku_db";    // Oluşturduğunuz veritabanı adı
+$username = "*****";  // Oluşturduğunuz kullanıcı adı
+$password = "********";    // Oluşturduğunuz kullanıcı şifresi
+$dbname = "*****";    // Oluşturduğunuz veritabanı adı
 
 // Bağlantı oluşturma
 $conn = new mysqli($servername, $username, $password, $dbname);
